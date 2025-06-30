@@ -1,14 +1,14 @@
 // linked-list.js
 
 
-export class Node {
+class Node {
     constructor(value = null, nextNode = null) {
         this.value = value;
         this.nextNode = nextNode;
     }
 }
 
-export class LinkedList {
+class LinkedList {
     constructor() {
         this.head = null // la tête de la liste vide au départ
     }
@@ -51,7 +51,7 @@ export class LinkedList {
         return count
     }
 
-    head() {
+    getHead() {
         // Retourne this.head qui est déjà la première valeur de base
         return this.head;
     }
@@ -204,3 +204,13 @@ export class LinkedList {
     }
 }
 
+const list = new LinkedList();
+
+list.append("dog");
+list.append("cat");
+list.append("parrot");
+list.append("hamster");
+list.append("snake");
+list.append("turtle");
+
+console.log(list.toString());
